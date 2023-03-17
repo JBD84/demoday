@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  badbankbackend_srv:
+    build:
+      context: ./backend
+    ports:
+      - 5002:5002
+    volumes:
+      - ./backend:/backend  
+  badbankfrontend_srv:
+    build: 
+      context: ./frontend
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/frontend
+##  mongo:
+##    image: mongo:5.0.10
+##    restart: always
+##    env_file:
+##      - ./frontend/.env
+  mongodb_container:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db  
+volumes:
+  mongodb_data_container:
