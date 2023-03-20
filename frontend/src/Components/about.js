@@ -1,5 +1,5 @@
 import Card from './card';
-import { ToolTips } from '../utils/tools';
+/*import { ToolTips } from '../utils/tools';*/
 const thisYear = new Date().getFullYear();
 
 const title = <a href="https://github.com/JBD84/fullstack-badbankapp" target="_blank" rel="noreferrer">
@@ -55,7 +55,7 @@ const about = <>
     </>;
 
 const body = <>
-    <a href="https://jbd84.github.io/" target="_blank" rel="noreferrer" alt='GitHub Icon'><button className="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to see my other projects" > &copy; {thisYear} Javier Bambaren D. <img src="./bank_icon.png" height="16" alt='iSANDEx Logo'></img></button></a>
+    <a href="https://jbd84.github.io/" target="_blank" rel="noreferrer" alt='GitHub Icon'><button className="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to see my other projects" > &copy; {thisYear} Javier Bambaren D. <img src="./bank_logo.png" height="16" alt='Bank'></img></button></a>
     </>
 
 function About() {

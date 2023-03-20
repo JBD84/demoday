@@ -13,10 +13,12 @@
 
  db.mongoose = mongoose;
  db.uri = process.env.MONGOOSE_URI + process.env.DBNAME + '?retryWrites=true&w=majority';
-
+  //console.log("uri",db.uri)
  db.mongoose
     .connect(db.uri, {
         useNewUrlParser: true,
+       // user:"root",
+       // pass:"example",
         useUnifiedTopology: true
     })
     .then(() => {
